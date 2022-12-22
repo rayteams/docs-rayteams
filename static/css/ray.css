@@ -1,0 +1,32 @@
+.book-menu .book-menu-content {
+	width: initial !important;
+    padding: initial !important;
+    background: initial !important;
+    position: initial !important;
+    overflow-x: initial !important;
+    overflow-y: initial !important;
+}
+.book-menu-content ul {
+	list-style-type:none;
+}
+.book-menu-content nav ul {
+	padding-left: 8px !important;
+}
+.book-menu-content ul li ul {
+	padding-left: 16px !important;
+}
+.book-menu-content nav > ul > li > ul {
+	padding-left: 0px !important;
+}
+.book-menu a.active {
+	color : #8574ff !important
+}
+.book-menu a, .book-menu label{
+    font-weight: 400 !important;
+}
+.book-menu {
+	font-size: 1.1em !important;
+}
+.book-section-flat {
+	margin-top : 8px !important;
+}

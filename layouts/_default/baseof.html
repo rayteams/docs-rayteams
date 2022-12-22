@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="{{ default .Site.Language.Lang .Site.LanguageCode  }}" dir="{{ default "ltr" .Site.Language.LanguageDirection }}">
+<head>
+  {{ partial "docs/html-head" . }}
+  {{ partial "docs/inject/head" . }}
+</head>
+<body dir="{{ default "ltr" .Site.Language.LanguageDirection }}">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <div class="content-wrapper rt-site docs">
+    <header class="wrapper bg-grape">
+      <nav class="navbar navbar-expand-lg center-nav transparent navbar-dark position-absolute">
+        <div class="container-fluid flex-lg-row flex-nowrap align-items-center">
+          <div class="navbar-brand ">
+            <a href="/">
+            <img class="logo-dark" src="/img/bi_rayteams_docs_bl.svg" alt="RAYTeams">
+            <img class="logo-light" src="/img/bi_rayteams_docs_w.svg" alt="RAYTeams">
+            </a>
+          </div>
+          <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
+            <div class="offcanvas-header d-lg-none">
+              <a href="/"><img src="/img/bi_rayteams_docs_w.svg" alt="RAYTeams"></a>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
+              <ul class="navbar-nav rayteams-menu">
+                <li class="nav-item active"><a class="nav-link" href="#">Link1</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Link2</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="navbar-other w-100 d-flex ms-auto">
+            <ul class="navbar-nav flex-row align-items-center ms-auto">
+            <li class="nav-item dropdown language-select text-uppercase">
+              {{ $selimg := (print "/img/flags/" $.Site.Language.LanguageName ".svg") }}
+              <a class="nav-link dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img class="flag" src="{{ $selimg }}" alt="">{{ $.Site.Language.LanguageName }}</a>
+              <ul class="dropdown-menu">
+                <li class="nav-item"><a class="dropdown-item" href="/en/"><img class="flag" src="/img/flags/uk.svg" alt="English">En</a></li>
+                <li class="nav-item"><a class="dropdown-item" href="/ko/"><img class="flag" src="/img/flags/kr.svg" alt="Korean">KR</a></li>
+              </ul>
+            </li>
+            <li class="nav-item d-lg-none">
+              <button class="hamburger offcanvas-nav-btn"><span></span></button>
+            </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-3 order-xl-1 sidebar doc-sidebar py-md-6 py-6 d-xl-block order-1 book-menu">
+          <div class="book-menu-content">
+            <div class="widget">
+              {{ template "menu" . }} <!-- Left menu Content -->
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-7 order-2 pt-md-8 pb-10">
+          <header class="book-header">
+            {{ template "header" . }} <!-- Mobile layout header -->
+          </header>
+
+          {{ partial "docs/inject/content-before" . }}
+          {{ template "main" . }} <!-- Page Content -->
+          {{ partial "docs/inject/content-after" . }}
+
+          <footer class="book-footer">
+            {{ template "footer" . }} <!-- Footer under page content -->
+            {{ partial "docs/inject/footer" . }}
+          </footer>
+
+          {{ template "comments" . }} <!-- Comments block -->
+
+          <label for="menu-control" class="hidden book-menu-overlay"></label>
+        </div>
+        <aside class="col-xl-2 order-xl-3 sidebar sticky-sidebar mt-md-0 py-8 d-none d-xl-block">
+          <div class="widget">
+            <h6 class="widget-title fs-17 mb-2">On this page</h6>
+            <div class="list-unstyled fs-sm lh-sm text-reset">
+              {{ template "toc" . }} <!-- Table of Contents -->
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+  {{ partial "docs/inject/body" . }}
+</body>
+</html>
+
+{{ define "menu" }}
+  {{ partial "docs/menu" . }}
+{{ end }}
+
+{{ define "header" }}
+  {{ partial "docs/header" . }}
+
+  {{ if default true (default .Site.Params.BookToC .Params.BookToC) }}
+  <aside class="hidden clearfix">
+    {{ template "toc" . }}
+  </aside>
+  {{ end }}
+{{ end }}
+
+{{ define "footer" }}
+  {{ partial "docs/footer" . }}
+{{ end }}
+
+{{ define "comments" }}
+  {{ if and .Content (default true (default .Site.Params.BookComments .Params.BookComments)) }}
+  <div class="book-comments">
+    {{- partial "docs/comments" . -}}
+  </div>
+  {{ end }}
+{{ end }}
+
+{{ define "main" }}
+  <article class="markdown">
+    {{- .Content -}}
+  </article>
+{{ end }}
+
+{{ define "toc" }}
+  {{ partial "docs/toc" . }}
+{{ end }}
