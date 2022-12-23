@@ -53,3 +53,11 @@ table, thead, tbody {
 .markdown pre {
 	background: #ecebff !important;
 }
+.ray-footer{
+	height: 80px !important;
+	background: #605dba !important;
+	color: #efefef !important;
+}
+a.mailto {
+	font-weight: 100;
+}

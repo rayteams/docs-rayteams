@@ -2,6 +2,7 @@
 title: Introduction
 type: docs
 bookToc: false
+home: true
 ---
 
 # Acerbo datus maxime
