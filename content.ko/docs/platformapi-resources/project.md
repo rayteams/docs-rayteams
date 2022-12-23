@@ -19,14 +19,14 @@ Project의 정보는 나누어져 있습니다. 이를 한번에 모두 전달 �
 
 | API | Description | Link |
 | --- | --- | --- |
-| /project/{_id}/info | 기본 정보를 보여줍니다. | [Project Data Types](/docs/platformapi-appendix/custom-data-type/#project)  |
+| /project/{_id}/info | 기본 정보를 보여줍니다. | https://www.notion.so/5-Object-Array-8e9fb2c6afa74245b1b20a6d99d382a6  |
 | /project/{_id}/memo | Comment 목록 보여줍니다. |  |
 | /project/{_id}/attachments | 첨부 파일 목록을 보여줍니다. |  |
 | /project/{_id}/histories | 변경 이력을 보여줍니다. |  |
 | /project/{_id}/orders | Orders를 보여줍니다. |  |
 | /project/{_id}/groups | 연관된 Group 정보를 보여줍니다.  |  |
 
-위의 Project의 Custom Data Type에 대해서는 [Project](/docs/platformapi-appendix/custom-data-type/#project) 뮨서를 참고
+위의 Project의 Custom Data Type에 대해서는 [Project](https://www.notion.so/Project-3be717595dfb4f44ba226f79a06fcc53) 뮨서를 참고
 
 ### Resource Information
 
@@ -60,13 +60,13 @@ GET /project/{_id}
 {
   "status": "success",
   "data": [
-	{...},
-	{...},
-	{...},
-	{...},
-	{...},
-	{...},
-	{...}
+		{...},
+		{...},
+		{...},
+		{...},
+		{...},
+		{...},
+		{...}
   ]
 }
 ```
@@ -231,7 +231,7 @@ GET /project/{_id}/memo
 | --- | --- | --- |
 | _id | String | 프로젝트의 고유 ID |
 | sk | String | “memo:TIMESTAMP”, 정보의 Type = memo:~ |
-| comments | Object Array | 1-depth 만 지원 |
+| comments | Object Array | 1-depth 만 지원, https://www.notion.so/Comment-Object-Structures-1773436d78864ffbbb8dbaec623ecd59 참고 |
 | isarchive | Boolean | 아카이브 보관 여부 |
 | created | String | Memo 작성 기각 |
 | groupId | String | 작성한 사용자의 Group ID |
@@ -560,7 +560,7 @@ GET /project
 ```
 
 <aside>
-💡 [4.3.2 Get project information](/docs/platformapi-resources/project/#432-get-project-information) 정보들이 나열됩니다.
+💡 [4.3.2 Get project information](https://www.notion.so/4-3-2-Get-project-information-87fefb3fb7b14d21a733d6f1b0458a6d) 정보들이 나열됩니다.
 
 </aside>
 
@@ -613,7 +613,10 @@ POST /project/{_id}/attachment/add
 }
 ```
 
-[Object Array 형태로 저장됩니다.](/docs/platformapi-appendix/custom-data-type/#project) Response 정보가 나열됩니다.
+<aside>
+💡 [아래의 5가지 정보들이 Object Array 형태로 저장됩니다.](https://www.notion.so/5-Object-Array-8e9fb2c6afa74245b1b20a6d99d382a6) Response 정보가 나열됩니다.
+
+</aside>
 
 ## 4.3.10 Get download attachment link
 
@@ -665,7 +668,12 @@ GET /project/{_id}/attachment/download/{_attachmentId}
 }
 ```
 
-💡 보안상의 이유로 임시 Download Link만 제공합니다. 개별 Attachment Object에 `downloadLink` 항목이 추가되어 전달됩니다.
+<aside>
+💡 보안상의 이유로 임시 Download Link만 제공합니다.
+[Response Body Structure](https://www.notion.so/Response-Body-Structure-9e441ba9273a42d4abbf2142a6d95842) 의 개별 Attachment Object에 `downloadLink` 항목이 추가되어 전달됩니다.
+
+</aside>
+
 전달 받은 Download Link로 Direct Acces하여 데이터를 Download 받을 수 있습니다.
 
 Download Link는 30분동안만 유효합니다.

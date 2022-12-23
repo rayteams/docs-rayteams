@@ -79,7 +79,7 @@ GET /product/{_productId}
 | Field | Type | Description |
 | --- | --- | --- |
 | _id | String | Project 고유 ID |
-| sk | String | 판매할 국가 코드, [Z.5 Country Code](/docs/platformapi-appendix/country-code/) 참고 |
+| sk | String | 판매할 국가 코드, https://www.notion.so/Z-5-Appendix-Country-Code-993bff14a0604802a364be87cde9b1ea 참고 |
 | currency | String | 상품 가격의 통화 단위 |
 | discount | String | 할인율 또는 할인 가격 |
 | originalprice | String | 상품/서비스의 기본 가격 |

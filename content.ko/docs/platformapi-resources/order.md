@@ -15,7 +15,7 @@ weight: 5
 
 특정 Order 정보를 전달합니다.
 
-Project와 Order의 관계는 [Z.7 Appendix - Project & Order](/docs/platformapi-appendix/project-and-order/) 문서를 참고해주시기 바랍니다.
+Project와 Order의 관계는 [Z.8 Appendix - Project & Order](https://www.notion.so/Z-8-Appendix-Project-Order-96781ed1b93a49098b6261a97dcc05b5) 문서를 참고해주시기 바랍니다.
 
 ### Resource Information
 
@@ -110,7 +110,7 @@ GET /order/{_orderId}
 
 Order의 Status를 변경할 수 있습니다.
 
-변경된 이력은 모두 해당 Project의 History에 기록됩니다. [Z.2 Appendix - Custom Data Type](/docs/platformapi-appendix/custom-data-type/) 참고
+변경된 이력은 모두 해당 Project의 History에 기록됩니다. [Z.2 Appendix - Custom Data Type](https://www.notion.so/Z-2-Appendix-Custom-Data-Type-fb8485fa8bd44b42a6422688947b9096) 참고
 
 ### Resource Information
 
@@ -146,7 +146,10 @@ PUT /order/{_id}/status
 | status | String | Status ID |
 | statusName | String | Status title |
 
-❓ `status`, `statusName` 값은 [4.6.1 Get product information](/docs/platformapi-resources/project/#432-get-project-information) 문서를 참고
+<aside>
+❓ `status`, `statusName` 값은 [4.6.1 Get product information](https://www.notion.so/4-6-1-Get-product-information-d11db68fefea430fad615312d64d83b1) 문서를 참고
+
+</aside>
 
 ### Response Body Structure
 
@@ -186,8 +189,11 @@ PUT /order/{_id}/status
 }
 ```
 
-❓ [4.5.1 Get order information](/docs/platformapi-resources/order/#451-get-order-information) 의 Response와 동일합니다.
+<aside>
+❓ [4.5.1 Get order information](https://www.notion.so/4-5-1-Get-order-information-bcc5b2da29e24f0d98c18be3cae29413) 의 Response와 동일합니다.
 즉, Update된 Order object가 그대로 전달됩니다.
+
+</aside>
 
 **Product & workflow**
 
@@ -195,4 +201,4 @@ PUT /order/{_id}/status
 
 또한, Product은 Workflow를 가지고 있습니다. 상품/서비스마다 주문에 대한 프로세스가 다르기 때문입니다.
 
-관련해서는 [4.6.1 Get product information](/docs/platformapi-resources/product/#461-get-product-information) 정보를 확인해주시기 바랍니다.
+관련해서는 [4.6.1 Get product information](https://www.notion.so/4-6-1-Get-product-information-d11db68fefea430fad615312d64d83b1) 정보를 확인해주시기 바랍니다.

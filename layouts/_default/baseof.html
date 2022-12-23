@@ -23,10 +23,18 @@
               <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
+              {{ $lng := (cond (eq $.Site.Language.Lang "en") "" $.Site.Language.Lang) }}
+              {{ if eq $lng "" }}
               <ul class="navbar-nav rayteams-menu">
-                <li class="nav-item active"><a class="nav-link" href="{{ (print "/" $.Site.Language "/platformapi/") }}">Platform API</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ (print "/" $.Site.Language "/posts/" ) }}">Blog</a></li>
+                <li class="{{ (print (cond (eq .Type "docs") "nav-item active" "nav-item") )}}"><a class="nav-link" href="/docs/platfromapi-overview/introduction/">Platform API</a></li>
+                <li class="{{ (print (cond (ne .Type "docs") "nav-item active" "nav-item") )}}"><a class="nav-link" href="/posts/">Blog</a></li>
               </ul>
+              {{ else }}
+              <ul class="navbar-nav rayteams-menu">
+                <li class="{{ (print (cond (eq .Type "docs") "nav-item active" "nav-item") )}}"><a class="nav-link" href="{{ (print "/" $lng "/docs/platfromapi-overview/introduction/") }}">Platform API</a></li>
+                <li class="{{ (print (cond (ne .Type "docs") "nav-item active" "nav-item") )}}"><a class="nav-link" href="{{ (print "/" $lng "/posts/" ) }}">Blog</a></li>
+              </ul>
+              {{ end }}
             </div>
           </div>
           <div class="navbar-other w-100 d-flex ms-auto">
@@ -49,6 +57,7 @@
       </nav>
     </header>
     <div class="container">
+      {{ if eq .Type "docs" }}
       <div class="row">
         <div class="col-xl-3 order-xl-1 sidebar doc-sidebar py-md-6 py-6 d-xl-block order-1 book-menu">
           <div class="book-menu-content">
@@ -61,6 +70,9 @@
           <header class="book-header">
             {{ template "header" . }} <!-- Mobile layout header -->
           </header>
+          <h1 class="mb-5">
+            {{ print .Page.LinkTitle | humanize | title }}
+          </h1>
 
           {{ partial "docs/inject/content-before" . }}
           {{ template "main" . }} <!-- Page Content -->
@@ -84,6 +96,43 @@
           </div>
         </aside>
       </div>
+      {{ else }}
+      <div class="row">
+        <div class="col-xl-10 pt-md-9 pb-10">
+
+          {{ if ne .Title "Blog" }}
+          <div class="mb-5">
+            {{ if eq $lng "" }}
+            <a href="/posts/">Posts</a>
+            {{ else }}
+            <a href="{{ (print "/" $lng "/posts/" ) }}">Posts</a>
+            {{ end }}
+          </div>
+          {{ end }}
+
+          {{ partial "docs/inject/content-before" . }}
+          {{ template "main" . }} <!-- Page Content -->
+          {{ partial "docs/inject/content-after" . }}
+
+          <footer class="book-footer">
+            {{ template "footer" . }} <!-- Footer under page content -->
+            {{ partial "docs/inject/footer" . }}
+          </footer>
+
+          {{ template "comments" . }} <!-- Comments block -->
+
+          <label for="menu-control" class="hidden book-menu-overlay"></label>
+        </div>
+        <aside class="col-xl-2 order-xl-3 sidebar sticky-sidebar mt-md-0 py-8 d-none d-xl-block">
+          <div class="widget">
+            <h6 class="widget-title fs-17 mb-2">On this page</h6>
+            <div class="list-unstyled fs-sm lh-sm text-reset">
+              {{ template "toc" . }} <!-- Table of Contents -->
+            </div>
+          </div>
+        </aside>
+      </div>
+      {{ end }}
     </div>
   </div>
   {{ partial "docs/inject/body" . }}

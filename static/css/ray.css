@@ -44,3 +44,12 @@
 table, thead, tbody {
 	width: 100% !important;
 }
+.markdown p {
+	margin-bottom: 4px !important;
+}
+.markdown code {
+	font-size: initial !important;
+}
+.markdown pre {
+	background: #ecebff !important;
+}

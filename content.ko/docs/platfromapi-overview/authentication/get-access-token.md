@@ -13,7 +13,7 @@ weight: 2
 
 Authorized Code를 통해서 Access Token을 획득하는 방법을 기술합니다.
 
-Authorized Code에 대해서는 [1. Get Authorized Code](/docs/platfromapi-overview/authentication/get-authorized-code/) 문서를 참고해주시기 바랍니다.
+Authorized Code에 대해서는 [1. Get Authorized Code](https://www.notion.so/1-Get-Authorized-Code-6c5ada2937204dc291c44f51076dbf7d) 문서를 참고해주시기 바랍니다.
 
 ## Token 정보
 

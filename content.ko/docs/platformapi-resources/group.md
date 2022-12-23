@@ -69,8 +69,8 @@ GET /mygroup
 | Field | Type | Description |
 | --- | --- | --- |
 | _id | String | Group의 고유 ID |
-| countryCode | String | 국가 코드 - [Z.5 Country Code](/docs/platformapi-appendix/country-code/) 참고 |
-| region | String | Group의 Region - [Z.1 Region](/docs/platformapi-appendix/region/) 참고 |
+| countryCode | String | 국가 코드 - https://www.notion.so/Z-6-Appendix-Deprecate-APIs-7f616a941fd34246885715264c9ac852 참고 |
+| region | String | Group의 Region - https://www.notion.so/Z-1-Appendix-Region-ca1f16cea87e466a89833656be63e180 참고 |
 | name | String | Group의 이름 |
 | address | String | Group의 주소 |
 | grouptype | Array | Group의 Type |
@@ -145,8 +145,8 @@ GET /group/{_id}
 | Field | Type | Description |
 | --- | --- | --- |
 | _id | String | Group의 고유 ID |
-| countryCode | String | 국가 코드 - [Z.5 Country Code](/docs/platformapi-appendix/country-code/) 참고 |
-| region | String | Group의 Region - [Z.1 Region](/docs/platformapi-appendix/region/) 참고 |
+| countryCode | String | 국가 코드 - https://www.notion.so/Z-6-Appendix-Deprecate-APIs-7f616a941fd34246885715264c9ac852 참고 |
+| region | String | Group의 Region - https://www.notion.so/Z-1-Appendix-Region-ca1f16cea87e466a89833656be63e180 참고 |
 | name | String | Group의 이름 |
 | address | String | Group의 주소 |
 | grouptype | Array | Group의 Type |
@@ -259,6 +259,11 @@ POST /groupbycountrycode
 }
 ```
 
+<aside>
+💡 [](https://www.notion.so/4929db1e0121472a8cef6f737662c560) 의 Response 정보가 Array로 나열됨
+
+</aside>
+
 **Fail** (Not exist)
 
 ```
@@ -364,6 +369,12 @@ POST /groupbyname
   }
 }
 ```
+
+<aside>
+💡 [](https://www.notion.so/4929db1e0121472a8cef6f737662c560) 의 Response 정보가 Array로 나열됨
+
+</aside>
+
 **Fail** (Not exist)
 
 ```

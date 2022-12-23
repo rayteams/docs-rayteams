@@ -23,7 +23,7 @@ RAYTeams Open API에서는 Project와 Order를 별개의 Resource로 관리하�
 
 - Project는 데이터를 공유하는 기본 단위입니다.
 - Project는 File과 Meta 정보로 구성됩니다.
-- File & Meta 정보는 Project Type 별로 그 구조가 다릅니다. ( [Z.6 Appendix - Project file types](/docs/platformapi-appendix/project-file-types/) )
+- File & Meta 정보는 Project Type 별로 그 구조가 다릅니다. ( [Z.6 Appendix - Project file types](https://www.notion.so/Z-6-Appendix-Project-file-types-33fd7fe8e45e456eb8e14524671a6d85) )
 - 1개의 Project는 여러개의 Order를 가질 수 있습니다.
 
 ### ProjectId

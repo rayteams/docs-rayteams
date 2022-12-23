@@ -17,9 +17,9 @@ Project를 구성하는 File을 가져옵니다. 모든 데이터를 전달하�
 
 다운로드 받을 수 있는 데이터는 `face`, `maxilla`, `mandible` 만 가능합니다. 다운로드 받을 type을 지정하지 않으면, 모든 다운로드 받을 수 있는 링크가 전달됩니다.
 
-Project file types에 대해서는 [Z.6 Appendix - Project file types](/docs/platformapi-appendix/project-file-types/) 문서를 참고해주시기 바랍니다.
+Project file types에 대해서는 [Z.7 Appendix - Project file types](https://www.notion.so/Z-7-Appendix-Project-file-types-33fd7fe8e45e456eb8e14524671a6d85) 문서를 참고해주시기 바랍니다.
 
-Project의 Attachment와는 다릅니다. Attachment와 File에 대해서는 [Z.4 Appendix - Files & Attachments](/docs/platformapi-appendix/project-files-and-attachements/) 문서를 참고해주시기 바랍니다.
+Project의 Attachment와는 다릅니다. Attachment와 File에 대해서는 [Z.4 Appendix - Project Files & Attachments](https://www.notion.so/Z-4-Appendix-Project-Files-Attachments-bb226ac2c6b24978923d0a9b67eeab09) 문서를 참고해주시기 바랍니다.
 
 ### Resource Information
 
@@ -78,7 +78,7 @@ GET /file/{_projectId}/{:_type}
 | --- | --- | --- |
 | _id | String | 프로젝트의 고유 ID |
 | files | File Object Array | 요청한 파일 목록 |
-|   filetype | String | File의 Types - [Project file types](/docs/platformapi-appendix/project-file-types/)  |
+|   filetype | String | File의 Types - https://www.notion.so/Z-7-Appendix-Project-file-types-33fd7fe8e45e456eb8e14524671a6d85  |
 |   downloadLink | String | 다운로드 받을 수 있는 링크 |
 |   downloadExpired | String | downloadLink 의 유효기간 |
 |   name | String | 파일 이름 |

@@ -59,7 +59,7 @@ GET /me
 
 | Field | Type | Description |
 | --- | --- | --- |
-| region | String | 사용자의 Group이 소속된 Region - [Z.1 Region](/docs/platformapi-appendix/region/) 참고 |
+| region | String | 사용자의 Group이 소속된 Region - https://www.notion.so/Z-1-Appendix-Region-ca1f16cea87e466a89833656be63e180 참고 |
 | type | String | 사용자의 Type(user, manager) |
 | sub | String | _id 값과 동일 |
 | groupId | String | 사용자가 소속된 Group ID |

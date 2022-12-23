@@ -24,11 +24,11 @@ https://api-[REGION]-[SCOPE].rayteams[SANDBOX].com/v[VERSION]/
 
 ### 항목 정보
 
-- REGION : RAYTeams Region 정보에 대해서는 [Z.1 Appendix - Region](/docs/platformapi-appendix/region/)   문서에서 확인할
-- SCOPE : Scope는 [Z.3 Appendix - Scope](/docs/platformapi-appendix/scope/)  에 정의 되어 있습니다.
+- REGION : RAYTeams Region 정보에 대해서는 [Z.1 Appendix - Region](/ko/docs/platformapi-appendix/region/)   문서에서 확인할
+- SCOPE : Scope는 [Z.3 Appendix - Scope](/ko/docs/platformapi-appendix/scope/)  에 정의 되어 있습니다.
 - SANDBOX
     - Sandbox 정보는 허가된 업체에서 API를 토대로 개발 또는 검증하기 위해 제공되는 독립적인/격리된 API 환경을 제공할때 사용되는 Key입니다.
-    - Sandbox 관련해서는 Sandbox 환경에 대한 [Z.9 Appendix - Sandbox](/docs/platformapi-appendix/sandbox/)  문서를 참고해주시기 바랍니다.
+    - Sandbox 관련해서는 Sandbox 환경에 대한 [Z.9 Appendix - Sandbox](/ko/docs/platformapi-appendix/sandbox/)  문서를 참고해주시기 바랍니다.
 
 Example
 

@@ -11,7 +11,7 @@ weight: 3
 
 ## Region
 
-RAYTeams OpenAPI Services는 Region 별로 격리되어 서비스를 제공하고 있습니다. Region 정보는 [Z.1 Appendix - Region](/docs/platformapi-appendix/region/) 문서에서 확인할 수 있습니다.
+RAYTeams OpenAPI Services는 Region 별로 격리되어 서비스를 제공하고 있습니다. Region 정보는 [Z.1 Appendix - Region](https://www.notion.so/Z-1-Appendix-Region-ca1f16cea87e466a89833656be63e180) 문서에서 확인할 수 있습니다.
 
 특정 Region에서 인증된 정보로 다른 Region의 API를 호출하게 되면, 요청을 거부합니다.
 
