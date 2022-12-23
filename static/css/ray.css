@@ -22,7 +22,8 @@
 	color : #8574ff !important
 }
 .book-menu a, .book-menu label{
-    font-weight: 400 !important;
+	font-weight: 400 !important;
+    font-size: 13px !important;
 }
 .book-menu {
 	font-size: 1.1em !important;
@@ -60,4 +61,7 @@ table, thead, tbody {
 }
 a.mailto {
 	font-weight: 100;
+}
+#TableOfContents li > a {
+	font-weight: 300 !important;
 }
