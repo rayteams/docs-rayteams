@@ -29,4 +29,18 @@
 }
 .book-section-flat {
 	margin-top : 8px !important;
+	margin-bottom : 12px !important;
+}
+#TableOfContents ul li ul {
+	padding-left: 4px !important;
+}
+#TableOfContents li {
+	margin-top :8px !important;
+	margin-bottom :8px !important;
+}
+#TableOfContents > ul > li > ul {
+	padding-left: 0px !important;
+}
+table, thead, tbody {
+	width: 100% !important;
 }

@@ -24,8 +24,8 @@
             </div>
             <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
               <ul class="navbar-nav rayteams-menu">
-                <li class="nav-item active"><a class="nav-link" href="#">Link1</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Link2</a></li>
+                <li class="nav-item active"><a class="nav-link" href="{{ (print "/" $.Site.Language "/platformapi/") }}">Platform API</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ (print "/" $.Site.Language "/posts/" ) }}">Blog</a></li>
               </ul>
             </div>
           </div>
@@ -48,7 +48,7 @@
         </div>
       </nav>
     </header>
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
         <div class="col-xl-3 order-xl-1 sidebar doc-sidebar py-md-6 py-6 d-xl-block order-1 book-menu">
           <div class="book-menu-content">
