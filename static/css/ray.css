@@ -54,7 +54,7 @@ table, thead, tbody {
 	background: #ecebff !important;
 }
 .ray-footer{
-	height: 80px !important;
+	min-height: 80px !important;
 	background: #605dba !important;
 	color: #efefef !important;
 }
