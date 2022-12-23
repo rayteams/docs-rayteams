@@ -48,31 +48,32 @@ GET /product/{_productId}
 ```
 {
   "status": "success",
-	"data": {
-			"_id": "e40bd99e-67f2-45ea-ab64-d1cfc79f403c",
-			"sk": "cid:KR",
-			"currency": "USD",
-			"discount": "10%",
-			"originalprice": 600,
-			"price": 540,
-			"productname": "Product A",
-			"description": "Description...",
-			"terms": "Terms content",
-			"link" : "https://~",
-			"workflow": [{
-					"status" : "node_1669006551533",
-					"statusName" : "Confirmed",
-					"statusType" : "INPROGRESS"
-			},{
-					"status" : "ewb-4",
-					"statusName" : "Done",
-					"statusType" : "CLOSED"
-			},
-			{...},
-			...
-			],
-			"created": 1669373634943,
-		}
+  "data": {
+    "_id": "e40bd99e-67f2-45ea-ab64-d1cfc79f403c",
+    "sk": "cid:KR",
+    "currency": "USD",
+    "discount": "10%",
+    "originalprice": 600,
+    "price": 540,
+    "productname": "Product A",
+    "description": "Description...",
+    "terms": "Terms content",
+    "link" : "https://~",
+    "workflow": [
+      {
+        "status" : "node_1669006551533",
+        "statusName" : "Confirmed",
+        "statusType" : "INPROGRESS"
+      },{
+        "status" : "ewb-4",
+        "statusName" : "Done",
+        "statusType" : "CLOSED"
+      },
+      {...},
+      ...
+    ],
+    "created": 1669373634943,
+  }
 }
 ```
 

@@ -53,24 +53,24 @@ GET /file/{_projectId}/{:_type}
 ```
 {
   "status": "success",
-	"data" : {
-			"_id" : "930449b1-76b4-479e-b1a7-a57e65d9d172",
-			"files" : [{
-					"filetype" : "mandible",
-					"downloadLink" : "https://~",
-					"downloadExpired" : 1669263126100,
-					"name" : "mandible.obj",
-					"size" : 25129108
-				},{
-					"filetype" : "face",
-					"downloadLink" : "https://~",
-					"downloadExpired" : 1669263332159,
-					"name" : "face.obj",
-					"size" : 29108
-				},
-			]
-		}
-	}
+  "data" : {
+    "_id" : "930449b1-76b4-479e-b1a7-a57e65d9d172",
+    "files" : [
+      {
+        "filetype" : "mandible",
+        "downloadLink" : "https://~",
+        "downloadExpired" : 1669263126100,
+        "name" : "mandible.obj",
+        "size" : 25129108
+      },{
+        "filetype" : "face",
+        "downloadLink" : "https://~",
+        "downloadExpired" : 1669263332159,
+        "name" : "face.obj",
+        "size" : 29108
+      }
+    ]
+  }
 }
 ```
 
@@ -89,6 +89,6 @@ fail (not exist)
 ```
 {
   "status": "success",
-	"data" : {}
+  "data" : {}
 }
 ```

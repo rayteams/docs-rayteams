@@ -218,43 +218,43 @@ POST /groupbycountrycode
   "status": "success",
   "data": [
     {
-	    "countryCode": "KR",
-	    "created": 1661256104649,
-	    "address": "서울시 광진구 자양동 자양로 15길",
-	    "grouptype": [],
-	    "name": "구의 치과",
-	    "hasMember": true,
-	    "updated": 1664328222035,
-	    "_id": "4b6f3137-87ce-443c-b9e6-bd6a4009c928",
-	    "tel": "",
-	    "coords": [
-	      127.0802384,
-	      37.5349614
-	    ],
-	    "sk": "info",
-	    "region": "ap-northeast-2",
-	    "relatedGroups": [],
-	    "extra": []
-		},
-		{
-	    "countryCode": "KR",
-	    "created": 1661154130280,
+      "countryCode": "KR",
+      "created": 1661256104649,
+      "address": "서울시 광진구 자양동 자양로 15길",
+      "grouptype": [],
+      "name": "구의 치과",
+      "hasMember": true,
+      "updated": 1664328222035,
+      "_id": "4b6f3137-87ce-443c-b9e6-bd6a4009c928",
+      "tel": "",
+      "coords": [
+        127.0802384,
+        37.5349614
+      ],
+      "sk": "info",
+      "region": "ap-northeast-2",
+      "relatedGroups": [],
+      "extra": []
+    },
+    {
+      "countryCode": "KR",
+      "created": 1661154130280,
       "address": "서울시 광진구 자양동 자양로 13가길 8 303",
-	    "grouptype": [],
+      "grouptype": [],
       "name": "테스트 치과",
-	    "hasMember": true,
-	    "updated": 1661154130280,
-	    "_id": "fd6ede0f-8bce-4316-a54c-38ae893964a3",
-	    "tel": "",
-	    "coords": [
+      "hasMember": true,
+      "updated": 1661154130280,
+      "_id": "fd6ede0f-8bce-4316-a54c-38ae893964a3",
+      "tel": "",
+      "coords": [
         127.0814971,
         37.5346789
-	    ],
-	    "sk": "info",
-	    "region": "ap-northeast-2",
-	    "relatedGroups": [],
-	    "extra": []
-		}
+      ],
+      "sk": "info",
+      "region": "ap-northeast-2",
+      "relatedGroups": [],
+      "extra": []
+    }
   }
 }
 ```
@@ -336,11 +336,11 @@ POST /groupbyname
         127.1103627,
         37.4026874
       ],
-	    "sk": "info",
-	    "region": "ap-northeast-2",
-	    "relatedGroups": [],
-	    "extra": []
-		},
+      "sk": "info",
+      "region": "ap-northeast-2",
+      "relatedGroups": [],
+      "extra": []
+    },
     {
       "countryCode": "KR",
       "created": 1662340572380,
@@ -356,11 +356,11 @@ POST /groupbyname
         127.008953,
         37.565682
       ],
-	    "sk": "info",
-	    "region": "ap-northeast-2",
-	    "relatedGroups": [],
-	    "extra": []
-		}
+      "sk": "info",
+      "region": "ap-northeast-2",
+      "relatedGroups": [],
+      "extra": []
+    }
   }
 }
 ```

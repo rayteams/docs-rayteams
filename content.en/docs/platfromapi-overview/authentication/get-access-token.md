@@ -113,13 +113,13 @@ POST https://oauth-ap-northeast-2-development.rayteams.com/oauth2/token >
   "id_token":"dmcxd329ujdmkemkd349r",
   "token_type":"Bearer", 
   "expires_in":3600
- }
+}
 ```
 
 **실패시의 결과**
 
 ```
 {
-	"error":"invalid_request|invalid_client|invalid_grant|unauthorized_client|unsupported_grant_type|"
+  "error":"invalid_request|invalid_client|invalid_grant|unauthorized_client|unsupported_grant_type|"
 }
 ```

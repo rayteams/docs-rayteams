@@ -48,34 +48,34 @@ GET /order/{_orderId}
 ```
 {
   "status": "success",
-	"data": {
-			"_id": "334c972a-5756-45f7-8eb1-f3f84bedd525",
-			"sk": "order:1669346270408",
-			"ownerGroupId": "62dfdb179a4e3409ba649869",
-			"labId": "fd6ede0f-8bce-4316-a54c-38ae893964a3",
-			"status": "node_1669006551572",
-			"statusName": "Wait Response",
-			"statusType": "INPROGRESS",
-			"product": {
-				"currency": "원",
-				"discount": "10",
-				"price": 360000,
-				"productname": "투명 교정 기본 B형",
-			},
-			"patientId": "NEW-0003",
-			"subject": {
-				"name" : "Tester",
-				"birth" : "1981-12-12"
-			},
-			"memo": "주문 신청",
-			"medicalRecords": {...},
-			"treatments": [
-				{...}
-			],
-			"workflow": {...},
-			"created": 1669346270408,
-			"updated": 1669399728318,
-		}
+  "data": {
+    "_id": "334c972a-5756-45f7-8eb1-f3f84bedd525",
+    "sk": "order:1669346270408",
+    "ownerGroupId": "62dfdb179a4e3409ba649869",
+    "labId": "fd6ede0f-8bce-4316-a54c-38ae893964a3",
+    "status": "node_1669006551572",
+    "statusName": "Wait Response",
+    "statusType": "INPROGRESS",
+    "product": {
+      "currency": "원",
+      "discount": "10",
+      "price": 360000,
+      "productname": "투명 교정 기본 B형",
+    },
+    "patientId": "NEW-0003",
+    "subject": {
+      "name" : "Tester",
+      "birth" : "1981-12-12"
+    },
+    "memo": "주문 신청",
+    "medicalRecords": {...},
+    "treatments": [
+      {...}
+    ],
+    "workflow": {...},
+    "created": 1669346270408,
+    "updated": 1669399728318,
+  }
 }
 ```
 
@@ -134,10 +134,10 @@ PUT /order/{_id}/status
 
 ```
 {
-	"data": {
-			"status": "node_1669006551533",
-			"statusName": "Confirmed"
-	}
+  "data": {
+    "status": "node_1669006551533",
+    "statusName": "Confirmed"
+  }
 }
 ```
 
@@ -155,34 +155,34 @@ PUT /order/{_id}/status
 ```
 {
   "status": "success",
-	"data": {
-			"_id": "334c972a-5756-45f7-8eb1-f3f84bedd525",
-			"sk": "order:1669346270408",
-			"ownerGroupId": "62dfdb179a4e3409ba649869",
-			"labId": "fd6ede0f-8bce-4316-a54c-38ae893964a3",
-			"status": "node_1669006551533",
-			"statusName": "Confirmed",
-			"statusType": "INPROGRESS",
-			"product": {
-				"currency": "원",
-				"discount": "10",
-				"price": 360000,
-				"productname": "투명 교정 기본 B형",
-			},
-			"patientId": "NEW-0003",
-			"subject": {
-				"name" : "Tester",
-				"birth" : "1981-12-12"
-			},
-			"memo": "주문 신청",
-			"medicalRecords": {...},
-			"treatments": [
-				{...}
-			],
-			"workflow": {...},
-			"created": 1669346270408,
-			"updated": 1669399728318,
-		}
+  "data": {
+    "_id": "334c972a-5756-45f7-8eb1-f3f84bedd525",
+    "sk": "order:1669346270408",
+    "ownerGroupId": "62dfdb179a4e3409ba649869",
+    "labId": "fd6ede0f-8bce-4316-a54c-38ae893964a3",
+    "status": "node_1669006551533",
+    "statusName": "Confirmed",
+    "statusType": "INPROGRESS",
+    "product": {
+      "currency": "원",
+      "discount": "10",
+      "price": 360000,
+      "productname": "투명 교정 기본 B형",
+    },
+    "patientId": "NEW-0003",
+    "subject": {
+      "name" : "Tester",
+      "birth" : "1981-12-12"
+    },
+    "memo": "주문 신청",
+    "medicalRecords": {...},
+    "treatments": [
+      {...}
+    ],
+    "workflow": {...},
+    "created": 1669346270408,
+    "updated": 1669399728318,
+  }
 }
 ```
 

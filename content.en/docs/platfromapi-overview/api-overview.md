@@ -93,7 +93,7 @@ Error Response는 크게 2가지 형태로 전달됩니다.
 
 ```
 {
-	"message" : "Unauthorized"
+  "message" : "Unauthorized"
 }
 ```
 
@@ -101,7 +101,7 @@ Error Response는 크게 2가지 형태로 전달됩니다.
 
 ```
 {
-	"errorCode" : "NO_ITEM"
+  "errorCode" : "NO_ITEM"
 }
 ```
 
