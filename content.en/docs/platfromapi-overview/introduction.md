@@ -11,20 +11,20 @@ weight: 1
 
 # Overview
 
-RayTeams provides environment and data for licensed users.
+RayTeams provides environment and data for authorized users.
 
-Open API Documents are also open to unauthorized users, but certain APIs are exposed only to licensed users.
+Open API Documents are also open to unauthorized users, but certain APIs are exposed only to authorized users.
 
 # Goals
 
 ## Data
 
-In conjunction with the RayTemas Service, you can link with the services provided by various rays and various 3rd-Party Applications/Service.
+To use the RAYTemas Open API Service, you can link with the services provided by various 3rd-Party Applications/Service.
 
-The range of interlocking depends on the service provided.
+The range of supports depends on the service provided.
 
 ## Service
 
-You can create the service or unique service / application provided by the Ray and publicize it to RayTeams.
+You can create the service or stand-alone Service / Application provided by the Ray and publishing it to RayTeams.
 
 In this way, you can easily deploy/offer service to various institutions that use RayTeams Service.
