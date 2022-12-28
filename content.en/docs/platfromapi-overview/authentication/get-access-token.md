@@ -11,20 +11,20 @@ weight: 2
 
 ## **Summary**
 
-Authorized Code를 통해서 Access Token을 획득하는 방법을 기술합니다.
+Describes how to acquire Access Token through Authorized Code.
 
-Authorized Code에 대해서는 [1. Get Authorized Code](/docs/platfromapi-overview/authentication/get-authorized-code/) 문서를 참고해주시기 바랍니다.
+Please refer to the [1. Get Authorized Code](/docs/platfromapi-overview/authentication/get-authorized-code/) document for the Authorized Code.
 
-## Token 정보
+## Token Information
 
-- Access Token은 발급 시점으로부터 1일동안 유효합니다.
-- Refresh Token은 1년간 유효합니다.
-- Access Token은 발급 Region별로 격리되어 있습니다.
-즉, `ap-northeast-2` region에서 발급 받은 Token은 동일 Region에서만 유효합니다.
+- Access token is valid for one day from the time of issuance.
+- Refresh token is valid for one year.
+- Access token is isolated by Region.
+In other words, the token issued in the `ap-northeast-2` Region is only valid in the same region.
 
-## Access Token 발급
+## Access token issuance
 
-아래와 같이 `/oauth2/token` Endpoint를 POST로 요청합니다.
+As shown below, request `/oauth2/token` endpoint as a POST.
 
 ```
 POST https://oauth-ap-northeast-2-development.rayteams.com/oauth2/token
@@ -34,9 +34,9 @@ POST https://oauth-ap-northeast-2-development.rayteams.com/oauth2/token
 
 **Authorization**
 
-클라이언트에 암호가 발급된 경우 클라이언트는 권한 부여 헤더에서 `client_secret_basic` HTTP 권한 부여로 해당 `client_id` 및 `client_secret`을 전달할 수 있습니다. 
+If a password is issued to the client, the client can deliver the `client_id` and `client_secret` by granting `client_secret_basic` http authority in the authorized header.
 
-`client_id` 와 `client_secret`의 값을 : 으로 Join하고 이 전체 String 을 Base64Ecode 한 값을 사용합니다.
+JOIN with the value of `client_id` and `client_secret` uses the value of this entire string.
 
 ```
 Authorization: Basic ZGpjOTh1M2ppZWRtaTI4M2V1OTI4OmFiY2RlZjAxMjM0NTY3ODkw
@@ -44,41 +44,40 @@ Authorization: Basic ZGpjOTh1M2ppZWRtaTI4M2V1OTI4OmFiY2RlZjAxMjM0NTY3ODkw
 
 **Content-Type**
 
-항상 `'application/x-www-form-urlencoded'`여야 합니다.
+You must always be `application/X-WWW-Form-Urlencoded`.
 
 ### **Request Body**
 
 *grant_type*
 
- 값은 `authorization_code` 으로 고정하여 사용합니다.
+The value is fixed to `authorization_code`.
 
 *client_id*
 
-제공되는 Client Id를 사용합니다.
+Use the provided Client ID.
 
 *client_secret*
 
-제공되는 Client Secret 값을 사용합니다.
+Use the provided Client Secret value.
 
 *redirect_uri*
 
-`/oauth2/authorize`에서 `authorization_code`를 얻기 위해 사용했던 `redirect_uri`와 같아야 합니다.
-`grant_type`이 `authorization_code`인 경우에만 필수입니다.
+It should be the same as `redirect_uri` used to obtain `authorization_code` in `/oauth2/authorize`.
+It is only necessary if `grant_type` is `authorization_code`.
 
 *refresh_token*
 
-사용자 세션에 대한 새 액세스 및 ID 토큰을 생성하려면 `/oauth2/token` 요청의 `refresh_token` 파라미터 값을 동일한 앱 클라이언트에서 이전에 발행된 새로 고침 토큰으로 설정하세요.
+To create new access and ID tokens for user sessions, set the `refresh_token` parameter value of `/oauth2/token` request as a refresh token issued earlier in the same app client.
 
 *code*
 
-`grant_type`이 `authorization_code`인 경우 필수입니다.
+If `grant_type` is `authorization_code`, it is essential.
 
 *code_verifier*
 
-증명 키입니다.
-`grant_type`이 `authorization_code`이며 PKCE를 통해 권한 부여 코드가 요청된 경우 필수입니다.
+`grant_Type` is `authorization_code` and is required if the authorization code is requested through PKCE.
 
-### Authorized Code로 Access Token 교환
+### Access token exchange with Authorized Code
 
 ```
 POST https://oauth-ap-northeast-2-development.rayteams.com/oauth2/token&
@@ -91,7 +90,7 @@ POST https://oauth-ap-northeast-2-development.rayteams.com/oauth2/token&
                        redirect_uri=com.myclientapp://myclient/redirect
 ```
 
-### Refresh Token으로 Access Token 교환
+### Access token exchange with Refresh token
 
 ```
 POST https://oauth-ap-northeast-2-development.rayteams.com/oauth2/token >
@@ -105,7 +104,7 @@ POST https://oauth-ap-northeast-2-development.rayteams.com/oauth2/token >
 
 ### Response Body
 
-**성공시의 결과**
+**The result of success**
 
 ```
 { 
@@ -116,7 +115,7 @@ POST https://oauth-ap-northeast-2-development.rayteams.com/oauth2/token >
 }
 ```
 
-**실패시의 결과**
+**The result of failure**
 
 ```
 {

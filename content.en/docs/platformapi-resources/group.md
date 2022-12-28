@@ -13,7 +13,7 @@ weight: 2
 
 ### Summary
 
-로그인된 사용자가 소속된 Group의 정보를 전달합니다.
+The login user delivers the information of the group.
 
 ### Resource Information
 
@@ -68,26 +68,26 @@ GET /mygroup
 
 | Field | Type | Description |
 | --- | --- | --- |
-| _id | String | Group의 고유 ID |
-| countryCode | String | 국가 코드 - [Z.5 Country Code](/docs/platformapi-appendix/country-code/) 참고 |
-| region | String | Group의 Region - [Z.1 Region](/docs/platformapi-appendix/region/) 참고 |
-| name | String | Group의 이름 |
-| address | String | Group의 주소 |
-| grouptype | Array | Group의 Type |
-| hasMember | Boolean | Group에 사용자가 존재하는지의 여부 |
-| tel | String | 전화 번호 |
-| coords | Array | 위도/경도 정보 |
-| relatedGroups | Array | Contract 관계의 Group |
-| extra | Array | Group의 추가 정보들 |
-| sk | String | “info” 로 값 고정 |
-| created | Number | 사용자의 Type(user, manager) |
-| updated | Number | 사용자의 고유 ID |
+| _id | String | Group's unique ID |
+| countryCode | String | Country code - [Z.5 Country Code](/docs/platformapi-appendix/country-code/) 참고 |
+| region | String | Group's Region - [Z.1 Region](/docs/platformapi-appendix/region/) 참고 |
+| name | String | Group name |
+| address | String | Group address |
+| grouptype | Array | Group's Type |
+| hasMember | Boolean | Whether the user exists in the group |
+| tel | String | Phone number |
+| coords | Array | Latitude/hardness information |
+| relatedGroups | Array | Group of Contract |
+| extra | Array | Add additional information |
+| sk | String | Fix the value with “INFO” |
+| created | Number | User's Type (user, manager) |
+| updated | Number | User's unique ID |
 
 ## 4.2.2 Get group information
 
 ### Summary
 
-특정 Group에 대한 정보를 전달합니다.
+Deliver information about specific groups.
 
 ### Resource Information
 
@@ -111,7 +111,7 @@ GET /group/{_id}
 
 | Name | Type | Description |
 | --- | --- | --- |
-| _id | String | Group의 고유 ID |
+| _id | String | Group's unique ID |
 
 ### Response Body Structure
 
@@ -144,20 +144,20 @@ GET /group/{_id}
 
 | Field | Type | Description |
 | --- | --- | --- |
-| _id | String | Group의 고유 ID |
-| countryCode | String | 국가 코드 - [Z.5 Country Code](/docs/platformapi-appendix/country-code/) 참고 |
-| region | String | Group의 Region - [Z.1 Region](/docs/platformapi-appendix/region/) 참고 |
-| name | String | Group의 이름 |
-| address | String | Group의 주소 |
-| grouptype | Array | Group의 Type |
-| hasMember | Boolean | Group에 사용자가 존재하는지의 여부 |
-| tel | String | 전화 번호 |
-| coords | Array | 위도/경도 정보 |
-| relatedGroups | Array | Contract 관계의 Group |
-| extra | Array | Group의 추가 정보들 |
-| sk | String | “info” 로 값 고정 |
-| created | Number | 사용자의 Type(user, manager) |
-| updated | Number | 사용자의 고유 ID |
+| _id | String | Group's unique ID |
+| countryCode | String | Country code - [Z.5 Country Code](/docs/platformapi-appendix/country-code/) 참고 |
+| region | String | Group's Region - [Z.1 Region](/docs/platformapi-appendix/region/) 참고 |
+| name | String | Group name |
+| address | String | Group address |
+| grouptype | Array | Group Type |
+| hasMember | Boolean | Whether the user exists in the group |
+| tel | String | phone number |
+| coords | Array | Latitude/hardness information |
+| relatedGroups | Array | Group of Contract |
+| extra | Array | Add additional information |
+| sk | String | Fix the value with “INFO” |
+| created | Number | User Type(user, manager) |
+| updated | Number | User's unique ID |
 
 **Fail** (Not exist)
 
@@ -171,7 +171,7 @@ GET /group/{_id}
 
 ### Summary
 
-특정 국가에 존재하는 그룹 목록을 가져옵니다.
+Bring a list of groups in a particular country.
 
 ### Resource Information
 
@@ -207,7 +207,7 @@ POST /groupbycountrycode
 
 | Field | Type | Description |
 | --- | --- | --- |
-| countryCode | String | 사용자가 소속된 Group의 활동 Region |
+| countryCode | String | Region of Group |
 
 ### Response Body Structure
 
@@ -272,7 +272,7 @@ POST /groupbycountrycode
 
 ### Summary
 
-그룹 이름으로 그룹을 검색한 결과를 전달합니다.
+It delivers the result of searching the group in the group name.
 
 ### Resource Information
 
@@ -305,13 +305,10 @@ POST /groupbyname
 
 | Field | Type | Description |
 | --- | --- | --- |
-| name | String | Group의 이름 |
-| allowEmptyMember | Boolean | (Optional) Group에 사용자가 존재하는지의 여부 |
+| name | String | Group name |
+| allowEmptyMember | Boolean | (Optional) Whether the user exists in the group |
 
-<aside>
-💡 `name` 의 값으로 group의 `name`을 like 검색합니다.
-
-</aside>
+LIKE searches 'name' of Group as a value of 'name'.
 
 ### Response Body Structure
 

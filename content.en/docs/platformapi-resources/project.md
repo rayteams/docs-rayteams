@@ -13,20 +13,20 @@ weight: 3
 
 ### Summary
 
-Project의 정보는 나누어져 있습니다. 이를 한번에 모두 전달 받을 수 있는 API 입니다.
+Project information is divided.This is an API that can be delivered at once.
 
-즉, 개별 정보들을 모아서 한번에 리턴합니다.
+In other words, we collect individual information and return them at once.
 
 | API | Description | Link |
 | --- | --- | --- |
-| /project/{_id}/info | 기본 정보를 보여줍니다. | [Project Data Types](/docs/platformapi-appendix/custom-data-type/#project)  |
-| /project/{_id}/memo | Comment 목록 보여줍니다. |  |
-| /project/{_id}/attachments | 첨부 파일 목록을 보여줍니다. |  |
-| /project/{_id}/histories | 변경 이력을 보여줍니다. |  |
-| /project/{_id}/orders | Orders를 보여줍니다. |  |
-| /project/{_id}/groups | 연관된 Group 정보를 보여줍니다.  |  |
+| /project/{_id}/info | Show the basic information. | [Project Data Types](/docs/platformapi-appendix/custom-data-type/#project)  |
+| /project/{_id}/memo | Show the list list. |  |
+| /project/{_id}/attachments | Show the list of attachments. |  |
+| /project/{_id}/histories | It shows a change history. |  |
+| /project/{_id}/orders | Show Orders. |  |
+| /project/{_id}/groups | Show the associated group information.  |  |
 
-위의 Project의 Custom Data Type에 대해서는 [Project](/docs/platformapi-appendix/custom-data-type/#project) 뮨서를 참고
+See the [Project](/docs/platformapi-appendix/custom-data-type/#project) for the custom data type of the above Project
 
 ### Resource Information
 
@@ -50,7 +50,7 @@ GET /project/{_id}
 
 | Name | Type | Description |
 | --- | --- | --- |
-| _id | String | 프로젝트의 고유 ID |
+| _id | String | Project's unique ID |
 
 ### Response Body Structure
 
@@ -71,15 +71,15 @@ GET /project/{_id}
 }
 ```
 
-아래의 5가지 정보들이 Object Array 형태로 저장됩니다.
+The following five information is stored in the Object Array form.
 
-아래 4.3.2 ~ 4.3.6 참고
+See 4.3.2 ~ 4.3.6 below
 
 ## 4.3.2 Get project information
 
 ### Summary
 
-Project의 기본정보만을 가져옵니다.
+Get only basic information of Project.
 
 ### Resource Information
 
@@ -103,7 +103,7 @@ GET /project/{_id}/info
 
 | Name | Type | Description |
 | --- | --- | --- |
-| _id | String | Project 고유 ID |
+| _id | String | Project unique ID |
 
 ### Response Body Structure
 
@@ -142,33 +142,33 @@ GET /project/{_id}/info
 
 | Field | Type | Description |
 | --- | --- | --- |
-| _id | String | 프로젝트의 고유 ID |
-| sk | String | “project”로 고정, 정보의 Type |
-| region | String | 프로젝트의 Region 정보 |
-| name | Number | 프로젝트의 이름(Alias) |
-| patientId | String | 프로젝트의 Patient ID |
-| projecttype | String | 프로젝트의 타입 |
-| size | Number | 프로젝트의 총 크기 |
-| count | Boolean | 프로젝트내의 파일 개순 |
-| ownerGroupId | String | 프로젝트를 생성한 사용자의 Group ID |
-| labId | String | 프로젝트를 공유 받은 Group ID |
-| lastUpdateGroupId | String | 마지막으로 프로젝트를 업데이트한 Group ID |
+| _id | String | Project's unique ID |
+| sk | String | Fixed with “Project”, the type of information |
+| region | String | Region information of the project |
+| name | Number | Project name(Alias) |
+| patientId | String | Project Patient ID |
+| projecttype | String | Project type |
+| size | Number | Total size of the project |
+| count | Boolean | Number of files in the project |
+| ownerGroupId | String | The group ID of the user who created the project |
+| labId | String | Group ID shared with the project |
+| lastUpdateGroupId | String | Finally, the group ID with the project updated |
 | status | Object | Project의 Status |
-|   code | String | 변경하려면 “custom”으로 고정 |
+|   code | String | To change, fixed with “Custom” |
 |   text | String | Status Title |
-| subject | Object | Project의 Subject(Title) |
-|   name | String | Project의 대상 이름 |
-|   birth | String | Project의 대상 생년월일 |
-| istrash | String | 프로젝트의 삭제 여부(휴지통) |
-| isarchive | Boolean | Archive 여부 |
-| created | Number | 프로젝트가 생성된 일시 |
-| updated | Number | 프로젝트의 최근 업데이트 시각 |
+| subject | Object | Project Subject(Title) |
+|   name | String | Project patient name |
+|   birth | String | Project patient birthday |
+| istrash | String | Deletion of the project (Trash) |
+| isarchive | Boolean | Whether Archive |
+| created | Number | The date and time the project was created |
+| updated | Number | Project's recent update time |
 
 ## 4.3.3 Get project memo
 
 ### Summary
 
-Project의 Memo 정보들을 가져옵니다. 
+Get the Memo information of Project.
 
 ### Resource Information
 
@@ -192,7 +192,7 @@ GET /project/{_id}/memo
 
 | Name | Type | Description |
 | --- | --- | --- |
-| _id | String | Project 고유 ID |
+| _id | String | Project unique ID |
 
 ### Response Body Structure
 
@@ -230,26 +230,26 @@ GET /project/{_id}/memo
 
 | Field | Type | Description |
 | --- | --- | --- |
-| _id | String | 프로젝트의 고유 ID |
+| _id | String | Project's unique ID |
 | sk | String | “memo:TIMESTAMP”, 정보의 Type = memo:~ |
-| comments | Object Array | 1-depth 만 지원 |
-| isarchive | Boolean | 아카이브 보관 여부 |
-| created | String | Memo 작성 기각 |
-| groupId | String | 작성한 사용자의 Group ID |
+| comments | Object Array | Only 1-depth support |
+| isarchive | Boolean | Archive storage |
+| created | String | Memo creation |
+| groupId | String | Created user group ID |
 
 **Comment Object Structures**
 
 | Field | Type | Description |
 | --- | --- | --- |
 | contents | String | HTML format |
-| created | String | Comment 작성 기각 |
-| groupId | String | 작성한 사용자의 Group ID |
+| created | String | Memo creation |
+| groupId | String | Created user group ID |
 
 ## 4.3.4 Get project attachments
 
 ### Summary
 
-Project에 첨부된 첨부파일들을 가져옵니다.
+Import the attached files attached to the Project.
 
 ### Resource Information
 
@@ -273,7 +273,7 @@ GET /project/{_id}/attachments
 
 | Name | Type | Description |
 | --- | --- | --- |
-| _id | String | Project 고유 ID |
+| _id | String | Project unique ID |
 
 ### Response Body Structure
 
@@ -305,18 +305,18 @@ GET /project/{_id}/attachments
 
 | Field | Type | Description |
 | --- | --- | --- |
-| _id | String | 프로젝트의 고유 ID |
+| _id | String | Project's unique ID |
 | sk | String | “attachments:~”, 정보의 Type = attachments:~ |
-| filetype | String | 첨부된 file type |
-| name | String | 첨부된 파일 이름 |
-| size | Number | 첨부된 파일의 크기(Byte) |
-| created | Number | 첨부 파일의 생성일시 |
+| filetype | String | Attached file type |
+| name | String | Attached file name |
+| size | Number | Size of attached files(Byte) |
+| created | Number | When the date of creation of the attachment |
 
 ## 4.3.5 Get project histories
 
 ### Summary
 
-Project의 변경 이력을 전달합니다.
+It delivers the change history of the Project.
 
 ### Resource Information
 
@@ -340,7 +340,7 @@ GET /project/{_id}/histories
 
 | Name | Type | Description |
 | --- | --- | --- |
-| _id | String | Project 고유 ID |
+| _id | String | Project unique ID |
 
 ### Response Body Structure
 
@@ -388,9 +388,9 @@ GET /project/{_id}/histories
 
 ### Summary
 
-Project에서 생성된 Order 정보를 전달합니다.
+Deliver the ORDER information generated in Project.
 
-개별 Order의 Object 정보는 문서를 참고해주시기 바랍니다.
+Please refer to the document for the object information of individual orders.
 
 ### Resource Information
 
@@ -414,7 +414,7 @@ GET /project/{_id}/orders
 
 | Name | Type | Description |
 | --- | --- | --- |
-| _id | String | Project 고유 ID |
+| _id | String | Project unique ID |
 
 ### Response Body Structure
 
@@ -440,25 +440,22 @@ GET /project/{_id}/orders
 
 | Field | Type | Description |
 | --- | --- | --- |
-| _id | String | 프로젝트의 고유 ID |
+| _id | String | Project's unique ID |
 | sk | String | “order:~”, 정보의 Type = order:~ |
 
-<aside>
-❓ Order Fields 정보는 문서를 참고
-
-</aside>
+Please refer to the document for the Order Fields information.
 
 ## 4.3.7 Get project groups
 
 ### Summary
 
-Project에 관계된 Group 정보를 전달합니다.
+Deliver group information related to Project.
 
-기본적으로 Project는 Owner Group과 Shared Group 으로 1개씩 생성됩니다.
+By default, the Project is created by Owner Group and Shared Group.
 
-Owner Group의 경우, `sk`의 값이 `project:institute:owner` 로 고정됩니다.
+For owner group, the value of `sk` is fixed to `project:institute:owner`.
 
-그렇지 않은 경우, `project:institute:TIMESTAMP` 형태로 저장됩니다. 이렇게 표시되는 Group 정보는 Shared Group 정보입니다.
+Otherwise, it is stored in the form of `Project:institute:timestamp`. The group information shown in this way is shared group information.
 
 ### Resource Information
 
@@ -482,7 +479,7 @@ GET /project/{_id}/groups
 
 | Name | Type | Description |
 | --- | --- | --- |
-| _id | String | Project 고유 ID |
+| _id | String | Project unique ID |
 
 ### Response Body Structure
 
@@ -512,19 +509,19 @@ GET /project/{_id}/groups
 
 | Field | Type | Description |
 | --- | --- | --- |
-| _id | String | 프로젝트의 고유 ID |
-| sk | String | “project:institute:~”, 정보의 Type = project:institute:~ |
-| group_id | String | Group의 고유 ID |
-| name | String | Project 이름 |
-| patientId | String | Project의 Patient ID |
+| _id | String | Project's unique ID |
+| sk | String | “project:institute:~”, Information Type = project:institute:~ |
+| group_id | String | Group's unique ID |
+| name | String | Project name |
+| patientId | String | Project Patient ID |
 
 ## 4.3.8 Get projects
 
 ### Summary
 
-로그인 사용자가 소속된 Group내의 모든 프로젝트를 리턴합니다.
+Returns all projects in the group that login users belong to.
 
-이때 Project Object는 Custom Data Type이 `project` 인 것들만 전달됩니다.
+At this time, the Project Object is delivered only the Custom Data Type `project`.
 
 ### Resource Information
 
@@ -564,16 +561,13 @@ GET /project
 }
 ```
 
-<aside>
-💡 [4.3.2 Get project information](/docs/platformapi-resources/project/#432-get-project-information) 정보들이 나열됩니다.
-
-</aside>
+[4.3.2 Get project information](/docs/platformapi-resources/project/#432-get-project-information) Information is listed.
 
 ## 4.3.9 Add attachment
 
 ### Summary
 
-특정 Project에 첨부을 등록할 수 있습니다.
+You can register an attachment to a specific project.
 
 ### Resource Information
 
@@ -597,7 +591,7 @@ POST /project/{_id}/attachment/add
 
 | Name | Type | Description |
 | --- | --- | --- |
-| _id | String | 프로젝트의 고유 ID |
+| _id | String | Project's unique ID |
 
 ### Request Body Structure
 
@@ -618,13 +612,13 @@ POST /project/{_id}/attachment/add
 }
 ```
 
-[Object Array 형태로 저장됩니다.](/docs/platformapi-appendix/custom-data-type/#project) Response 정보가 나열됩니다.
+[Object Array 형태로 저장됩니다.](/docs/platformapi-appendix/custom-data-type/#project) Response information is listed.
 
 ## 4.3.10 Get download attachment link
 
 ### Summary
 
-특정 첨부파일을 다운로드 받을 수 있는 임시 Link를 전달합니다.
+Deliver a temporary link that can download a specific attachment file.
 
 ### Resource Information
 
@@ -648,7 +642,7 @@ GET /project/{_id}/attachment/download/{_attachmentId}
 
 | Name | Type | Description |
 | --- | --- | --- |
-| _id | String | 프로젝트의 고유 ID |
+| _id | String | Project's unique ID |
 | _attachmentId | String | attachment sk value(예시 : attachments:1669272938428) |
 
 ### Response Body Structure
@@ -670,7 +664,7 @@ GET /project/{_id}/attachment/download/{_attachmentId}
 }
 ```
 
-💡 보안상의 이유로 임시 Download Link만 제공합니다. 개별 Attachment Object에 `downloadLink` 항목이 추가되어 전달됩니다.
-전달 받은 Download Link로 Direct Acces하여 데이터를 Download 받을 수 있습니다.
+Only temporary download links are provided for security reasons. `downloadLink` item is added to the individual Attachment Object.
+You can download the data by direct accessing with the download link.
 
-Download Link는 30분동안만 유효합니다.
+Download Link is only valid for 30 minutes.

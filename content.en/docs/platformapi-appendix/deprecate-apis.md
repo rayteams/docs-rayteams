@@ -10,9 +10,9 @@ weight: 9
 ---
 ## Summary
 
-기본적으로 RAYTeams의 모든 API는 Backward compatibility를 지원합니다.
+By default, all APIs in RayTeams support backward compatibility.
 
-다만, 특별한 상황에서는 지원되지 않을 수 있습니다.
+However, it may not be supported in special situations.
 
 ## Depreacted APIs
 

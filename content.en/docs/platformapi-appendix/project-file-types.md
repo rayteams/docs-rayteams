@@ -11,9 +11,9 @@ weight: 6
 
 ## Summary
 
-다운로드할 수 있는 File Type에 대해서 설명합니다.
+Describes the File type that can be downloaded.
 
-File Type은 Project Type별로 정의됩니다.
+File type is defined for each project type.
 
 ## Project type 별 File types
 
@@ -22,12 +22,12 @@ File Type은 Project Type별로 정의됩니다.
 | type | Comment |
 | --- | --- |
 | face | Face file |
-| maxilla | 상악 Intra-oral scan file |
-| mandible | 하악 Intra-oral scan file |
+| maxilla | Maxillary Intra-oral scan file |
+| mandible | Mandible Intra-oral scan file |
 
 ### IOS
 
 | type | Comment |
 | --- | --- |
-| maxilla | 상악 Intra-oral scan file |
-| mandible | 하악 Intra-oral scan file |
+| maxilla | Maxillary Intra-oral scan file |
+| mandible | Mandible Intra-oral scan file |

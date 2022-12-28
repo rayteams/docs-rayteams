@@ -11,41 +11,38 @@ weight: 1
 
 ## Summary
 
-RAYTeams의 모든 서비스와 데이터는 Region별로 격리되어 제공됩니다.
+All services and data in RAYTeams are isolated by Region.
 
-데이터와 서비스는 Region별로 격리되어 저장되고 운영됩니다. Region 정보는 인증 정보에 추가되어있습니다.
+Data and services are isolated and stored and operated by Region. Region information is added to the authentication information.
 
 ## List
 
-| 리전 값 | 리전 정보 | 기준 국가 정보 |
+|Region value | Region Information | Country |
 | --- | --- | --- |
-| ap-northeast-1 | 아시아 태평양(도쿄) | 일본, JP |
-| ap-northeast-2 | 아시아 태평양(서울) | 대한민국, KR |
-| us-east-1 | 미국 동부(버지니아 북부) | 미국, US |
-| ap-south-1 | 아시아 태평양(뭄바이) | 인도, IN |
-| ap-southeast-1 | 아시아 태평양(싱가포르) | 싱가포르, SG |
-| ap-southeast-2 | 아시아 태평양(시드니) | 오스트레일리아, AU |
-| ca-central-1 | 캐나다(중부) | 캐나다, CA |
-| eu-central-1 | 유럽(프랑크푸르트) | 독일, DE |
-| eu-west-1 | 유럽(아일랜드) | 아일랜드, IE |
-| eu-west-2 | 유럽(런던) | 영국, GB |
-| eu-west-3 | 유럽(파리) | 프랑스, FR |
-| eu-north-1 | 유럽(스톡홀름) | 스웨덴, SE |
-| sa-east-1 | 남아메리카(상파울루) | 브라질, BR |
+| ap-northeast-1 | Asia Pacific (Tokyo) | japan, JP |
+| ap-northeast-2 | Asia Pacific (Seoul) | korea, KR |
+| us-east-1 | Eastern United States (Northern Virginia) | United States of America, US |
+| ap-south-1 | Asia Pacific (Mumbai) | India, IN |
+| ap-southeast-1 | Asia Pacific (Singapore) | Singapore, SG |
+| ap-southeast-2 | Asia Pacific (Sydney) | Australia, AU |
+| ca-central-1 | Canada (Central) | Canada, CA |
+| eu-central-1 | Europe (Frankfurt) | germany, DE |
+| eu-west-1 | Europe (Ireland) | Ireland, IE |
+| eu-west-2 | Europe (London) | England, GB |
+| eu-west-3 | Europe (Paris) | France, FR |
+| eu-north-1 | Europe (Stockholm) | Sweden, SE |
+| sa-east-1 | South America (Sao Paulo) | brazil, BR |
 
-<aside>
-💡 ap-east-1 region은 중국/홍콩에서만 사용이 가능합니다.
+The ap-east-1 region can only be used in China/Hong Kong.
 
-</aside>
+## Basic policy
 
-## 기본 정책
+### Decision
 
-### 결정
+All groups belong to a particular country.The country is automatically determined by the nearest Region from the standard state of the above region.
 
-모든 Group은 특정 국가에 소속되어집니다. 해당 국가는 위의 Region의 기준 국가로부터 가장 가까운 Region으로 자동 결정됩니다.
+### Update
 
-### 변경
+Once determined, the Region information of the group cannot be changed.
 
-한번 결정된 Group의 Region 정보는 변경이 불가합니다.
-
-Group이 Global하게 운영된다면, Region 별로 Group의 Branch를 만들어서 운영할 수 있습니다.
+If Group is operated global, you can create and operate Group's Branch by Region.

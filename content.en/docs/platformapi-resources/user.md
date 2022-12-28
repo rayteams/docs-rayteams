@@ -13,7 +13,7 @@ weight: 1
 
 ### Summary
 
-현재 로그인된 사용자의 정보를 전달합니다.
+Deliver the current logged -in user information.
 
 ### Resource Information
 
@@ -59,22 +59,22 @@ GET /me
 
 | Field | Type | Description |
 | --- | --- | --- |
-| region | String | 사용자의 Group이 소속된 Region - [Z.1 Region](/docs/platformapi-appendix/region/) 참고 |
+| region | String | Region with a user's group - [Z.1 Region](/docs/platformapi-appendix/region/) |
 | type | String | 사용자의 Type(user, manager) |
-| sub | String | _id 값과 동일 |
-| groupId | String | 사용자가 소속된 Group ID |
-| name | String | 사용자의 이름 |
-| email | String | 사용자의 Email Address |
-| _id | String | 사용자의 고유 ID |
-| lastlogged | Number | 마지막 로그인 시각 |
-| sk | String | “info” 로 값 고정 |
-| valid | Boolean | 사용자 정보가 Valid 인지 아닌지의 여부 |
+| sub | String | _id value |
+| groupId | String | Group ID |
+| name | String | User's name |
+| email | String | User email address |
+| _id | String | User's unique ID |
+| lastlogged | Number | Last login time |
+| sk | String | Fix the value with “info” |
+| valid | Boolean | Whether user information is valid or not |
 
 ## 4.1.2 Get user information by email
 
 ### Summary
 
-Email 주소를 사용하는 특정 사용자의 정보를 전달합니다.
+Deliver information from a specific user using the email address.
 
 ### Resource Information
 
@@ -126,16 +126,16 @@ POST /getuserbyemail
 
 | Field | Type | Description |
 | --- | --- | --- |
-| region | String | 사용자가 소속된 Group의 활동 Region |
-| type | String | 사용자의 Type(user, manager) |
-| sub | String | _id 값과 동일 |
-| groupId | String | 사용자가 소속된 Group ID |
-| name | String | 사용자의 이름 |
-| email | String | 사용자의 Email Address |
-| _id | String | 사용자의 고유 ID |
-| lastlogged | Number | 마지막 로그인 시각 |
-| sk | String | “info” 로 값 고정 |
-| valid | Boolean | 사용자 정보가 Valid 인지 아닌지의 여부 |
+| region | String | Group activity of group that users belong to |
+| type | String | User Type(user, manager) |
+| sub | String | _id value |
+| groupId | String | Group ID |
+| name | String | User name |
+| email | String | User Email Address |
+| _id | String | User's unique ID |
+| lastlogged | Number | Last login time |
+| sk | String | Fix the value with “info” |
+| valid | Boolean | Whether user information is valid or not |
 
 **Fail**
 

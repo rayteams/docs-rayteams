@@ -11,63 +11,60 @@ weight: 8
 
 ## Z.8.1 Summary
 
-RAYTeams Open API를 검토/검증하기 위해서 테스트할 수 있는 여러 환경을 제공합니다.
+It provides multiple environments that can be tested to review/verify the RAYTeams Open API.
 
-누구나 검증해볼 수 있는 Test Environment와 업체별 고유로 검증할 수 있는 Develop Environmet 가 존재합니다. 
+There is a test Environment that anyone can verify and a Developing Environment that can be verified by company.
 
-## Z.8.2 종류 별 특징
+## Z.8.2 Types of features
 
 ### Z.8.2.1 Test Environment
 
-RSP(RAYTeams Service Portal)의 개발자 계정이 존재하는 사용자들을 Test 환경을 사용할 수 있습니다.
+You can use the test environment for users who have a developer account of RayTeams Service Portal(RSP).
 
-**주요 특징**
+**Main features**
 
-- 매주 데이터는 초기화 됩니다.
-- 다른 업체와 공용으로 사용됩니다.
+- Weekly data are initialized.
+- It is used as common with other companies.
 
 ### Z.8.2.1 Develop Environmet
 
-관련 업체중에 고유의 검증 환경을 원하는 경우, RAYTeams Service Portal에서는 별도의 독립적인 환경을 제공합니다.
+If you want a unique verification environment among the related companies, the RayTeams Service Portal offers a separate independent environment.
 
-위의 환경을 제공받기 위해서는 별도의 절차에 의해서만 사용이 가능합니다.
+To receive the above environment, it can only be used by a separate procedure.
 
-**환경에 대한 비교**
+**Comparison of the environment**
 
-| 비교 항목 | Test | Develop |
+| Compare | Test | Develop |
 | --- | --- | --- |
-| 제공하는 API | API 최신 버전 | API 최신 버전 |
-| 데이터 | 공용 | 독립/격리 |
-| 데이터 보존 기한 | 매주 초기화 | 환경 종료시에 자동 삭제 |
-| 환경의 종료 | 없음 | 생성 후 6개월 |
-| 사용의 제한 | 없음 | 별도의 절차 필요 |
+| API provided | API latest version | API latest version |
+| Data | Public | Independence/isolation |
+| Data Initialize | Every week initialization | Automatic deletion at the end of the environment |
+| End of the Environment | No | 6 months after creation |
+| Restriction of use | No |Separate procedure required |
 
 ## Z.8.3 Develop Key(Develop sandbox only)
 
-별도로 독립적인 환경을 구성하기 위해서는 ClientID / Client Secret를 발급 받아야 합니다.
+In order to form an independent environment separately, you need to be issued a clientId / Client Secret.
 
-별도의 절차를 따라 ClientID / Client Secret를 발급받을 수 있고, 해당 정보는 특정 기간 동안(생성후 6개월)만 유효합니다.
+ClientID / Client Secret can be issued along a separate procedure, and the information is valid for a certain period of time (6 months after creation).
 
-### Z.8.3.1 발급 절차
+### Z.8.3.1 Issuance
 
-아래의 순서로 독립적인 환경 사용을 위한 ClientID / Client Secret 값을 받을 수 있습니다.
+In the following order, you can receive a clientId / client secret value for the use of an independent environment.
 
-1. [Ray Service Portal](https://www.notion.so/RAYTeams-Service-Portal-b85d227c492e47de98e315a241502979)에 가입( [https://rsp.rayteams.com/](https://rsp.rayteams.com/) ) 
-2. Develop Key 생성 요청서 작성 및 Submit
-3. 검토 및 승인 안내
-4. 발급 완료
+1. Reguster in [Ray Service Portal](https://www.notion.so/RAYTeams-Service-Portal-b85d227c492e47de98e315a241502979)( [https://rsp.rayteams.com/](https://rsp.rayteams.com/) ) 
+2. Develop key creation request and submit
+3. Review and approval guide
+4. Completion of issuance
 
-**검토 및 승인 안내**는 약 1~3일(영업일 기준) 정도 소요됩니다.
+**Review and approval guidance** takes about 1-3 days (business day).
 
 ## Z.8.4 API Swagger
 
-RAYTeams API Service에는 API 테스트를 위한 Test Tool을 제공합니다.
+RayTeams API Service provides test tools for API tests.
 
-Test Tool은 [Swagger](https://swagger.io/)로 구성되어 있으며, [Ray Service Portal](https://www.notion.so/RAYTeams-Service-Portal-b85d227c492e47de98e315a241502979) 에 접속하여 확인할 수 있습니다.
+Test Tool consists of [Swagger](https://swagger.io/) and can be checked by accessing the Ray Service Portal(RSP).
 
-사용할때에는 환경에 맞는 ClientID와 Client Secret을 통해서만 정상적으로 Test 할 수 있습니다.
+When using it, you can only test it only through clientId and Client Secret for the environment.
 
-<aside>
-❓ 일부 API는 환경과 Scope에 따라 노출되지 않을 수 있습니다.
-
-</aside>
+Some APIs may not be exposed according to the environment and scope.

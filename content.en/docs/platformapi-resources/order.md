@@ -13,9 +13,9 @@ weight: 5
 
 ### Summary
 
-특정 Order 정보를 전달합니다.
+Deliver specific order information.
 
-Project와 Order의 관계는 [Z.7 Appendix - Project & Order](/docs/platformapi-appendix/project-and-order/) 문서를 참고해주시기 바랍니다.
+Please refer to the [Z.7 Appendix - Project & Order](/docs/platformapi-appendix/project-and-order/) document for the relationship between Project and Order.
 
 ### Resource Information
 
@@ -39,7 +39,7 @@ GET /order/{_orderId}
 
 | Name | Type | Description |
 | --- | --- | --- |
-| _orderId | String | Order의 고유 ID |
+| _orderId | String | Order's unique ID |
 
 ### Response Body Structure
 
@@ -81,36 +81,36 @@ GET /order/{_orderId}
 
 | Field | Type | Description |
 | --- | --- | --- |
-| _id | String | Project 고유 ID |
-| sk | String | Order의 Key |
-| ownerGroupId | String | Project를 생성한 Group의 고유 ID |
-| labId | String | Order를 받은 Group의 고유 ID |
+| _id | String | Project unique ID |
+| sk | String | Order's Key |
+| ownerGroupId | String | Group's unique ID that created Project |
+| labId | String | Order's unique ID |
 | status | String | Status ID |
 | statusName | String | Status title |
 | statusType | String | Status type ( NEW, INPROGRESS, CLOSED ) |
-| product | Object | 상품의 정보 Object |
-|   currency | String | 결제 통화 단위 |
-|   discount | String | 할인률 또는 할인 정보 |
-|   price | Number | 가격 |
-|   productname | String | 상품의 이름 |
-| patientId | String | 환자의 ID |
-| subject | Object | 환자 정보 OBject |
-|   name | String | 환자의 이름 |
-|   birth | String | 환자의 생년월일 |
-| memo | String | 주문에 대한 추가 코멘트 |
-| medicalRecords | Object | 환자의 상태 정보 |
-| treatments | Object Array | 치료 계획 |
-| workflow | Object | 주문의 Flow |
-| created | Number | 사용자의 Type(user, manager) |
-| updated | Number | 사용자의 고유 ID |
+| product | Object | Product information Object |
+|   currency | String | Payment unit |
+|   discount | String | Discount rate or discount information |
+|   price | Number | Price |
+|   productname | String | Product name |
+| patientId | String | Patient ID |
+| subject | Object | Patient information OBject |
+|   name | String | Patient name |
+|   birth | String | Patient birthday |
+| memo | String | Additional comments on orders |
+| medicalRecords | Object | Patient status information |
+| treatments | Object Array | Treatment plan |
+| workflow | Object | Order Flow |
+| created | Number | User Type(user, manager) |
+| updated | Number | User's unique ID |
 
 ## 4.2.2 Update order status
 
 ### Summary
 
-Order의 Status를 변경할 수 있습니다.
+You can change the status of the order.
 
-변경된 이력은 모두 해당 Project의 History에 기록됩니다. [Z.2 Appendix - Custom Data Type](/docs/platformapi-appendix/custom-data-type/) 참고
+All changed history is recorded in the History of the Project. [Z.2 Appendix - Custom Data Type](/docs/platformapi-appendix/custom-data-type/)
 
 ### Resource Information
 
@@ -146,7 +146,7 @@ PUT /order/{_id}/status
 | status | String | Status ID |
 | statusName | String | Status title |
 
-❓ `status`, `statusName` 값은 [4.6.1 Get product information](/docs/platformapi-resources/project/#432-get-project-information) 문서를 참고
+'Status', `StatusName` value refer to [4.6.1 Get product information](/docs/platformapi-resources/project/#432-get-project-information) documentation
 
 ### Response Body Structure
 
@@ -186,13 +186,13 @@ PUT /order/{_id}/status
 }
 ```
 
-❓ [4.5.1 Get order information](/docs/platformapi-resources/order/#451-get-order-information) 의 Response와 동일합니다.
-즉, Update된 Order object가 그대로 전달됩니다.
+Same as the response of [4.5.1 Get order information](/docs/platformapi-resources/order/#451-get-order-information).
+In other words, the update order object is delivered as it is.
 
 **Product & workflow**
 
-주문은 Product에 의해서 생성됩니다. Product에 대한 기본 정보는 Order에 담겨있습니다.
+The order is created by Product.Basic information about the product is contained in the order.
 
-또한, Product은 Workflow를 가지고 있습니다. 상품/서비스마다 주문에 대한 프로세스가 다르기 때문입니다.
+In addition, the product has a workflow.This is because the process of ordering is different for each product/service.
 
-관련해서는 [4.6.1 Get product information](/docs/platformapi-resources/product/#461-get-product-information) 정보를 확인해주시기 바랍니다.
+Please check the [4.6.1 Get product information](/docs/platformapi-resources/product/#461-get-product-information) information.

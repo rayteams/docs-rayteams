@@ -13,9 +13,9 @@ weight: 6
 
 ### Summary
 
-주문의 Prouct 정보를 전달합니다.
+Deliver the program information of the order.
 
-Product 마다 이용약관을 동의 받을 수 있습니다.
+You can agree with the terms and conditions for each product.
 
 ### Resource Information
 
@@ -79,18 +79,18 @@ GET /product/{_productId}
 
 | Field | Type | Description |
 | --- | --- | --- |
-| _id | String | Project 고유 ID |
-| sk | String | 판매할 국가 코드, [Z.5 Country Code](/docs/platformapi-appendix/country-code/) 참고 |
-| currency | String | 상품 가격의 통화 단위 |
-| discount | String | 할인율 또는 할인 가격 |
-| originalprice | String | 상품/서비스의 기본 가격 |
-| price | String | 상품/서비스의 제공 가격 |
-| productname | String | 상품/서비스의 이름 |
-| description | Object | 상품/서비스의 상세 내용 |
-| terms | String | 이용 약관 |
-| link | Object | 관련 상세 정보 링크 |
-| workflow | Object Array | 주문에 대한 Process |
+| _id | String | Project unique ID |
+| sk | String | Country code to be sold, [Z.5 Country Code](/docs/platformapi-appendix/country-code/) |
+| currency | String | Call unit of product price |
+| discount | String | Discount rate or discount price |
+| originalprice | String | Basic price of product/service |
+| price | String | Product/Service Price Price |
+| productname | String | Name of product/service |
+| description | Object | Details of the product/service |
+| terms | String | Terms of service |
+| link | Object | Related detailed information link |
+| workflow | Object Array | Order Process |
 |   status | String | Status Id |
 |   statusName | String | Status Title |
 |   statusType | String | Status Type ( NEW / INPROGRESS / CLOSED ) |
-| created | Object | 상품의 생성일 |
+| created | Object | Created date |

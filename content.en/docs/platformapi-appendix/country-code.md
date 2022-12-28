@@ -11,9 +11,9 @@ weight: 5
 
 ## Summary
 
-RAYTeams의 Group은 1개의 Country에 소속됩니다.
+The group of RayTeams belongs to one country.
 
-Country 정보는 Country Code로 사용됩니다. 아래의 정보는 국가별 Country Code를 보여줍니다.
+Country information is used as Country Code. The information below shows Country Code by country.
 
 ## List
 

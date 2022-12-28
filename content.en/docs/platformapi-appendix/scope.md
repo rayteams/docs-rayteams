@@ -11,15 +11,15 @@ weight: 3
 
 ## Summary
 
-RAYTeams는 Service 용도별로 Scope이 격리되어 API를 제공합니다.
+RayTeams provides APIs by isolated scopes for each service use.
 
 ## List
 
-| Scope | 용동 |
+| Scope | Usage |
 | --- | --- |
-| User | 사용자 관련 API |
-| Group | Group 관련 API |
-| Project | Project 관련 API |
-| File | File 관련 API |
-| Order | 주문 관련 API |
-| Product | 상품 관련 API |
+| User | User API |
+| Group | Group API |
+| Project | Project API |
+| File | File API |
+| Order | Order API |
+| Product | Product API |

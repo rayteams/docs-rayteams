@@ -11,21 +11,21 @@ weight: 2
 
 ## Summary
 
-RAYTeams의 특정 Object(Project, Group 등)은 정보를 분산하여 보관하고 있습니다.
+Certain objects (projects, groups, etc.) of RAYTeams are distributed and stored.
 
-예를들어, 1개의 Project에 대한 첨부파일은 Project 정보에 포함되어 있지 않고, 별도의 정보로 관리됩니다.
+For example, attachments to a project are not included in the project information, but are managed by separate information.
 
-이에 이 페이지에서는 Scope 별 Custom Data Type에 대해서 소개합니다.
+This page introduces the Custom Data Type by Scope.
 
 ## Project
 
-| sk | 내용 | Project : Rows |
+| sk | Contents | Project : Rows |
 | --- | --- | --- |
-| project | Project의 기본 정보 | 1 : 1 |
-| attachments: | Project에 첨부된 첨부파일 정보 | 1 : 0~N |
-| his: | Project에 변경 이력 | 1 : 0~N |
-| memo: | Project에 Memo 목록 | 1 : 0~N |
-| project:institute: | Project에 관계된 Group 정보 | 1 : 2~N |
-| order: | Project에서 발생한 주문 정보 | 1 : 0~N |
+| project | Basic information of Project | 1 : 1 |
+| attachments: | Attachment information attached to Project | 1 : 0~N |
+| his: | Change history to Project | 1 : 0~N |
+| memo: | Memo list on Project | 1 : 0~N |
+| project:institute: | Group information related to Project | 1 : 2~N |
+| order: | Order information from Project | 1 : 0~N |
 
 ##

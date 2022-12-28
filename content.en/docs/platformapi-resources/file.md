@@ -13,13 +13,13 @@ weight: 4
 
 ### Summary
 
-Project를 구성하는 File을 가져옵니다. 모든 데이터를 전달하지는 않습니다.
+Import the file that constitutes the Project.It does not deliver all data.
 
-다운로드 받을 수 있는 데이터는 `face`, `maxilla`, `mandible` 만 가능합니다. 다운로드 받을 type을 지정하지 않으면, 모든 다운로드 받을 수 있는 링크가 전달됩니다.
+Only data that can be downloaded can only be 'FACE', 'Maxilla' and 'Mandible'. If you do not specify the type to download, you will receive a link that you can download.
 
-Project file types에 대해서는 [Z.6 Appendix - Project file types](/docs/platformapi-appendix/project-file-types/) 문서를 참고해주시기 바랍니다.
+Please refer to the [Z.6 Appendix - Project file types](/docs/platformapi-appendix/project-file-types/) document for Project File Typs.
 
-Project의 Attachment와는 다릅니다. Attachment와 File에 대해서는 [Z.4 Appendix - Files & Attachments](/docs/platformapi-appendix/project-files-and-attachements/) 문서를 참고해주시기 바랍니다.
+It is different from the Attachment of Project.Please refer to [Z.4 Appendix - Files & Attachments](/docs/platformapi-appendix/project-files-and-attachements/) documentation for Attachment and File.
 
 ### Resource Information
 
@@ -76,13 +76,13 @@ GET /file/{_projectId}/{:_type}
 
 | Field | Type | Description |
 | --- | --- | --- |
-| _id | String | 프로젝트의 고유 ID |
-| files | File Object Array | 요청한 파일 목록 |
-|   filetype | String | File의 Types - [Project file types](/docs/platformapi-appendix/project-file-types/)  |
-|   downloadLink | String | 다운로드 받을 수 있는 링크 |
-|   downloadExpired | String | downloadLink 의 유효기간 |
-|   name | String | 파일 이름 |
-|   size | Number | 파일의 크기 |
+| _id | String | Project's unique ID |
+| files | File Object Array | Required file list |
+|   filetype | String | Type of files - [Project file types](/docs/platformapi-appendix/project-file-types/)  |
+|   downloadLink | String | Link that can be downloaded |
+|   downloadExpired | String | Downloadlink's validity period |
+|   name | String | File name |
+|   size | Number | File size |
 
 fail (not exist)
 
