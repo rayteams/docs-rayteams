@@ -1,7 +1,7 @@
 # hugo server --minify --themesDir ... --baseURL=http://0.0.0.0:1313/theme/hugo-book/
 
-baseURL = 'https://rayteams.github.io/docs-rayteams/'
-title = 'RAYTeams Developer Center'
+baseURL = 'https://rayteams.github.io/'
+title = 'RAYTeams Developer'
 theme = 'hugo-book'
 
 # Book configuration
@@ -51,9 +51,9 @@ enableGitInfo = false
 [params]
   # (Optional, default light) Sets color theme: light, dark or auto.
   # Theme 'auto' switches between dark and light modes based on browser/os preferences
-  BookTheme = 'light'
+  BookTheme = 'dark'
 
-  custom_css = ["css/ray.css", "css/style.css"]
+  # custom_css = ["css/ray.css", "css/style.css"]
 
   # (Optional, default true) Controls table of contents visibility on right side of pages.
   # Start and end levels can be controlled with markup.tableOfContents setting.
